@@ -1,2 +1,2 @@
-# sysadmin-toolkit-
+# sysadmin-toolkit
 quick guides :)
