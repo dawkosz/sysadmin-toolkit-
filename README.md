@@ -1,2 +1,0 @@
-# sysadmin-toolkit
-quick guides :)
