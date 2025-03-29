@@ -73,3 +73,5 @@
 - Po każdej zmianie pliku `.service` trzeba wykonać `daemon-reload`
 - Warto testować jednostki systemd przed restartem serwera
 
+Autor: dawkosz  
+Data: 2025-03-27
