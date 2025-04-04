@@ -16,6 +16,20 @@ To repozytorium rośnie wraz z doświadczeniem.
 | `postmortems/` | Opisane incydenty z życia – objawy, przyczyny, rozwiązania |
 | `docs/` | Checklisty, dobre praktyki, dokumentacja |
 
+## 🌩️ Cloud – GCP + AWS
+
+Repozytorium zawiera rzeczywiste i symulowane przypadki związane z debugowaniem, konfiguracją i utrzymaniem infrastruktury chmurowej.
+
+Obecnie rozwijam swój DevOpsowy toolset z naciskiem na GCP oraz AWS – pracuję m.in. z:
+- dostępem do instancji EC2 i Compute Engine
+- firewallami (Security Groups, VPC Rules)
+- procesami odzyskiwania systemów (snapshot, EBS recovery)
+- SSH/keypair logic
+- CLI (`gcloud`, `aws`)
+
+Wszystkie scenariusze w repo dokumentują typowe problemy i rozwiązania, z którymi może zetknąć się DevOps pracujący z maszynami wirtualnymi w chmurze.
+
+
 ---
 
 ## 📚 Przykładowe incydenty
