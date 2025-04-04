@@ -90,6 +90,15 @@ Będę wdzięczny za kredyt/autora jeśli coś wykorzystasz 🙏
 
 ---
 
+## 🤖 Wsparcie AI
+
+Część treści (formatowanie, cheatsheety, porządkowanie struktury plików, przykładowe opisy) została przygotowana lub dopracowana przy wsparciu ChatGPT.
+
+To nadal moje repozytorium, pomysły i doświadczenia – ChatGPT służył jako narzędzie wspierające pisanie techniczne, diagnostykę i organizację wiedzy.
+
+---
+
+
 ## ✍️ Autor
 
 **dawkosz**  
