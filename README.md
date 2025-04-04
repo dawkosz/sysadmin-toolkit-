@@ -1,20 +1,59 @@
-# 🧰 Sysadmin Toolkit
+# 🧰 sysadmin-toolkit
 
-Zestaw narzędzi, scenariuszy, skryptów i post-mortemów oparty na realnych incydentach z życia administratora sieci i systemów.
+Zestaw narzędzi, skryptów i udokumentowanych incydentów z życia administratora systemów / DevOpsa.
 
-Stworzony z myślą o tym, żeby nie tylko **naprawiać**, ale też **uczyć się, dokumentować i przewidywać.**  
-To repozytorium rośnie wraz z doświadczeniem.
+To moje prywatne repozytorium, które rozwijam jako dokumentację przypadków, z jakimi pracuję lub które analizuję. Znajdziesz tu:
+- skrypty (bash, crontab, systemd)
+- gotowe rozwiązania typowych problemów
+- postmortemy (analiza + rozwiązanie + wnioski)
+- elementy DevOpsowe, chmurowe i infrastrukturalne
+
+Repozytorium służy mi jako:
+- notatnik i baza wiedzy
+- proof-of-skill
+- portfolio DevOps / SysAdmin
 
 ---
 
-## 📁 Zawartość
+## 📂 Struktura repozytorium
 
-| Folder | Zawartość |
-|--------|-----------|
-| `cron/` | Crontaby, automatyczne backupy i czyszczenie |
-| `scripts/` | Skrypty administracyjne: backupy, cleanupy, testy |
-| `postmortems/` | Opisane incydenty z życia – objawy, przyczyny, rozwiązania |
-| `docs/` | Checklisty, dobre praktyki, dokumentacja |
+```
+postmortems/         # opisy incydentów + ich analiza
+scripts/             # skrypty narzędziowe (bash, cron, deploy)
+docs/                # cheatsheet'y, checklisty, notatki
+```
+
+---
+
+## 💥 Incydenty techniczne
+
+✅ Oparte o rzeczywiste scenariusze  
+✅ Pokazują jak diagnozować, a nie tylko „naprawiać”  
+✅ Każdy ma: Objawy / Przyczynę / Rozwiązanie / Wnioski
+
+Przykłady:
+
+- #001 – Cron zapętla skrypt tokenów
+- #005 – `while True` + brak limitów = 300% CPU
+- #006 – brak logów przez `chmod 700` na katalogu
+- #007 – `ExecStart` bez ścieżki w systemd
+- #008 – skrypt `sleep(30)` zamiast backendu 🤯
+- #009 – GCP firewall zablokował aplikację po restarcie
+- #010 – EC2 bez key-pair → odzysk przez snapshot
+
+📄 Zobacz wszystkie: [`postmortems/`](postmortems/)
+
+---
+
+## 🛠️ Skrypty
+
+Znajdują się w `scripts/`.  
+Zawierają:
+
+- `backup-and-clean.sh` – cron backup z automatycznym czyszczeniem starszych archiwów
+- `daily-check.sh` – (w planach) diagnostyka CPU, RAM, usługi, porty
+
+---
 
 ## 🌩️ Cloud – GCP + AWS
 
@@ -27,31 +66,32 @@ Obecnie rozwijam swój DevOpsowy toolset z naciskiem na GCP oraz AWS – pracuj�
 - SSH/keypair logic
 - CLI (`gcloud`, `aws`)
 
-Wszystkie scenariusze w repo dokumentują typowe problemy i rozwiązania, z którymi może zetknąć się DevOps pracujący z maszynami wirtualnymi w chmurze.
-
-
----
-
-## 📚 Przykładowe incydenty
-
-- **#001 – Apache vs Nginx**: Konflikt o port 80, walka certbota z cronem  
-- **#002 – Gunicorn CPU 200%** *(coming soon...)*  
-- **#003 – Backupy zjadły cały dysk** *(work in progress)*  
+📘 [Cloud Cheatsheet – GCP + AWS](docs/cloud-cheatsheet.md)  
+📄 [Postmortem #009 – GCP Firewall](postmortems/incident-gcp-firewall-block.md)  
+📄 [Postmortem #010 – AWS EC2 key-pair recovery](postmortems/incident-ec2-keypair-lost.md)
 
 ---
 
-## 💡 Po co to?
+## 🧠 Stack i narzędzia
 
-- 🧠 Żeby pokazać, jak myślę i działam w sytuacjach kryzysowych  
-- 🛠️ Żeby tworzyć własną bazę wiedzy i doświadczenia  
-- 📂 Żeby inni mogli się zainspirować lub skorzystać  
-- 💼 Dla przyszłego pracodawcy — lub obecnego zespołu  
+- Bash, crontab
+- systemd
+- `ss`, `ps`, `htop`, `journalctl`
+- `aws` CLI, `gcloud` CLI
+- Linux (Debian/Ubuntu), SSH, VM
+- Markdown jako forma dokumentacji technicznej
 
 ---
 
-## 📣 Kontakt / autor
+## 🧾 Licencja
 
-**Autor:** dawkosz  
-**GitHub:** [github.com/dawkosz](https://github.com/dawkosz)
+MIT – możesz korzystać, inspirować się, rozwijać dalej.  
+Będę wdzięczny za kredyt/autora jeśli coś wykorzystasz 🙏
 
-> *“To nie bug, to feature… którego nie opisałem jeszcze w README.”*
+---
+
+## ✍️ Autor
+
+**dawkosz**  
+sysadmin → devops-in-progress  
+dokumentuję, debuguję, działam
